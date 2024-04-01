@@ -2,12 +2,14 @@ import Row from "react-bootstrap/Row";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import AlbumCard from "./AlbumCard";
+import Player from "./Player";
 
 const MainPage = () => {
   const [rockSection, setRockSection] = useState([]);
   const [popSection, setPopSection] = useState([]);
   const [hipHopSection, setHipHopSection] = useState([]);
 
+  const [selectedSong, setSelectedSong] = useState(null);
   const artistData = useSelector((state) => state.data.data);
 
   const resultsFetch = async (artistName, setSection) => {
@@ -68,7 +70,7 @@ const MainPage = () => {
               <h2>Rock classics</h2>
               <div className="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 imgLinks py-3" id="rockSection">
                 {rockSection.slice(0.6).map((songInfo, i) => (
-                  <AlbumCard songInfo={songInfo} key={i} />
+                  <AlbumCard songInfo={songInfo} key={i} onSongSelect={setSelectedSong} />
                 ))}
               </div>
             </div>

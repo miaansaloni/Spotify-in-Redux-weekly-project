@@ -72,13 +72,14 @@ const Sidebar = () => {
         </div>
       </div>
       <div className="nav-btn d-flex flex-column align-items-center">
-        <button className="btn signup-btn" type="button">
+        <button className="btn" id="signup-btn" type="button">
           Sign Up
         </button>
-        <button className="btn login-btn" type="button">
+        <button className="btn" id="login-btn" type="button">
           Login
         </button>
-        <a href="/">Cookie Policy</a> |<a href="/"> Privacy</a>
+        <a href="/">Cookie Policy</a>
+        <a href="/"> Privacy</a>
       </div>
     </nav>
   );

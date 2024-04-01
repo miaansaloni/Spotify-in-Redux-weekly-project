@@ -1,6 +1,6 @@
 import Row from "react-bootstrap/Row";
 import { Col } from "react-bootstrap";
-// import { Heart } from "react-bootstrap-icons";
+import { Heart } from "react-bootstrap-icons";
 import { useSelector } from "react-redux";
 // import ProgressBar from "react-bootstrap/ProgressBar";
 
@@ -21,7 +21,9 @@ const Player = () => {
                 <span className="song-info">{song.title}</span>
                 <span className="song-info">{song.artist.name}</span>
               </div>
-              {/* <Heart alt="heart" /> */}
+              <div>
+                <Heart alt="heart" className="text-white m-3" />
+              </div>
             </Col>
           )}
           <div className="col-4 playerControls">

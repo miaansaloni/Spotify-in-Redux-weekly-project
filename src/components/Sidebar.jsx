@@ -18,13 +18,13 @@ const Sidebar = () => {
   };
 
   return (
-    <nav class="navbar navbar-expand-md fixed-left justify-content-between" id="sidebar">
-      <div class="container flex-column align-items-start">
-        <a class="navbar-brand" href="index.html">
+    <nav className="navbar navbar-expand-md fixed-left justify-content-between" id="sidebar">
+      <div className="container flex-column align-items-start">
+        <a className="navbar-brand" href="index.html">
           <img src="logo.png" alt="Spotify Logo" width="131" height="40" />
         </a>
         <button
-          class="navbar-toggler"
+          className="navbar-toggler"
           type="button"
           data-toggle="collapse"
           data-target="#navbarNavAltMarkup"
@@ -32,27 +32,27 @@ const Sidebar = () => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
+        <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div className="navbar-nav">
             <ul>
               <li>
-                <a class="nav-item nav-link d-flex align-items-center" href="/">
+                <a className="nav-item nav-link d-flex align-items-center" href="/">
                   <HouseDoorFill />
                   Home
                 </a>
               </li>
               <li>
-                <a class="nav-item nav-link d-flex align-items-center" href="/">
+                <a className="nav-item nav-link d-flex align-items-center" href="/">
                   <BookFill /> Your Library
                 </a>
               </li>
               <li>
-                <form class="input-group mt-3" onSubmit={handleSubmit}>
+                <form className="input-group mt-3" onSubmit={handleSubmit}>
                   <input
                     type="text"
-                    class="form-control"
+                    className="form-control"
                     id="searchField"
                     placeholder="Search"
                     aria-label="Search"
@@ -60,8 +60,8 @@ const Sidebar = () => {
                     value={query}
                     onChange={onChange}
                   />
-                  <div class="input-group-append">
-                    <button class="btn btn-outline-secondary btn-sm h-100" type="submit">
+                  <div className="input-group-append">
+                    <button className="btn btn-outline-secondary btn-sm h-100" type="submit">
                       GO
                     </button>
                   </div>
@@ -71,11 +71,11 @@ const Sidebar = () => {
           </div>
         </div>
       </div>
-      <div class="nav-btn d-flex flex-column align-items-center">
-        <button class="btn signup-btn" type="button">
+      <div className="nav-btn d-flex flex-column align-items-center">
+        <button className="btn signup-btn" type="button">
           Sign Up
         </button>
-        <button class="btn login-btn" type="button">
+        <button className="btn login-btn" type="button">
           Login
         </button>
         <a href="/">Cookie Policy</a> |<a href="/"> Privacy</a>

@@ -1,4 +1,5 @@
 export const FETCH_DATA = "FETCH_DATA";
+export const SEARCH = "SEARCH";
 
 export const fetchData = (query) => {
   return (dispatch, getState) => {
@@ -23,5 +24,12 @@ export const fetchData = (query) => {
       .catch((error) => {
         console.log(error);
       });
+  };
+};
+
+export const songSearch = (data) => {
+  return {
+    type: SEARCH,
+    payload: data,
   };
 };

@@ -6,6 +6,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Sidebar from "./components/Sidebar";
 import MainPage from "./components/MainPage";
+import Player from "./components/Player";
 
 function App() {
   return (
@@ -17,6 +18,9 @@ function App() {
             <MainPage />
           </Col>
         </Row>
+      </Container>
+      <Container fluid className="fixed-bottom bg-container pt-1">
+        <Player />
       </Container>
     </>
   );
